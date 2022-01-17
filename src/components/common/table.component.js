@@ -1,12 +1,12 @@
 import TableBody from "./table-body.component";
 import TableHeader from "./table-header.component";
 
-const Table = props => {
+const Table = ({items, columns, onSort, sortColumn}) => {
   return (
     <>
       <table className="table">
-        <TableHeader columns={props.columns} />
-        <TableBody data={props.data} columns={props.columns}/>
+        <TableHeader columns={columns} onSort={onSort} sortColumn={sortColumn} />
+        <TableBody items={items} columns={columns}/>
       </table>
     </>
   );
