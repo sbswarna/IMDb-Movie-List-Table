@@ -1,8 +1,8 @@
-const TableBody = ({ data, columns }) => {
+const TableBody = ({ items, columns }) => {
   return (
     <>
       <tbody>
-        {data.map(row => {
+        {items.map(row => {
             return (
                 <tr>
                 {
